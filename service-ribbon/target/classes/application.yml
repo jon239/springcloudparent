@@ -1,0 +1,16 @@
+server:
+  port: 8083
+
+spring:
+  application:
+    name: service-ribbon
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: ["health","info","hystrix.stream"]
